@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = “utf-8”> 
+        <title>Handsomelee's Canvas</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <script src="main.js"></script>
+        <script src="jquery.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("button").click(function(){
+                  $("#animal").css('z-index', -1);
+                  $("#headtext").css('z-index', -2);
+                  $("#test11").css('z-index', -2);
+                  $("#animal").animate({
+                    opacity : '0',
+                });
+                $("#test11").animate({
+                    opacity : '0',
+                });
+                $("#headtext").animate({
+                    opacity : '0',
+                });
+                });
+              });
+        </script>
+    </head>
+    <body onload="init()" background="painttt.jpg">
+        <div id="headtext">CANVAS</div>
+        <button id="test11" class="test11">LET'S START</button>
+            <img src="back.JPG" id="animal"></img>
+
+        <center class="style1"><h1>My Painting Style</h1></center>        
+            <div id = "sidebarleft">   
+                
+                <P>
+                    <input class="pen" name="R" type="image" value="" onclick="text_onclick()" src="pen.png" width="30" height="30" title="pen"/><br>
+                </P>
+                <p>
+                    <input class="rainbow" name="R" type="image" value="" onclick="bow_onclick()" src="sun.png" width="30" height="30" title = "rainbow"/><br>
+                </p>
+                <p>
+                    <input class="rec" name="R" type="image" value="" onclick="rec_onclick()" src="rectan.png" width="30" height="30" title="rectangle"/><br>
+                </p>
+                <p>
+                    <input class="cir" name="R" type="image" value="" onclick="cir_onclick()" src="circle.png" width="30" height="30" title="circle"/><br>
+                </p>
+                    <input class="ram" name="R" type="image" value="" onclick="ram_onclick()" src="trian.png" width="30" height="30" title="triangle"/><br>
+                <p>
+                    <input class="eraser" name="R" type="image" value="" onclick="white_onclick()" src="eraser.png" width="30" height="30" title="eraser"/><br>
+                </p>
+                <p>
+                    <input type="image"  value="" class="ctext" onclick="ctext()" src="textt.png" width="30" height="30" title="type"> 
+                </p>
+                <p>
+                <input type="range" id="rangeThickness" value="20" onchange="setFont_size(this.value)"><br>
+                    <span aria-label="Click anywhere">
+                    </span>
+                    <select class="custom-select" id="inputGroupSelect01" onChange="setFont(this.selectedIndex);">
+                            <option selected>Arial</option>   
+                            <option>Verdana</option>                      
+                            <option>sans-serif</option>
+                            <option>新細明體</option>
+                            <option>標楷體</option>
+                            <option>微軟正黑體</option>
+                    </select>
+                </p>
+                
+            </div>
+            <div id = "sidebarright">
+                <p>   
+                    <input class="undo" name="R" type="image" value="" onclick="cUndo()" src="undo.png" width="30" height="30" title = "undo"/>
+                </p><br>
+                <p>   
+                    <input class="redo" name="R" type="image" value="" onclick="cRedo()" src="redo.png" width="30" height="30" title = "redo"/><br>
+                </p>
+                <p>
+    
+                    <input class="Button1" type="image" value="" onclick="Button1_onclick()" src="reset.png" width="30" height="30" title="reset"/><br>
+                </p>
+                <p>   
+                    <input class="download2" name="R" type="image" value="" onclick="download()" src="load.png" width="30" height="30" title="download"/>
+                    <a id="download"></a><br>
+                </p>
+                <p>   
+                    <a href="https://www.facebook.com/"> <input class="face" name="R" type="image" value="" src="face.png" width="30" height="30" title="facebook"/></a><br>
+                </p>
+                <div style="text-align: center">
+                        <ul class="word">
+                            <li><img src="text.png" alt="HAHA" width="40" height="40" title="size">
+                                <ul>
+                                    <li><input id="text1" type="button" value="1" onclick="text1_onclick()" checked/></li>
+                                    <li><input id="text2" type="button" value="2" onclick="text2_onclick()" /></li>
+                                    <li><input id="text3" type="button" value="3" onclick="text3_onclick()" /></li>
+                                    <li><input id="text5" type="button" value="5" onclick="text5_onclick()" /></li>
+                                    <li><input id="text10" type="button" value="10" onclick="text10_onclick()" /></li>
+                                    <li><input id="text30" type="button" value="30" onclick="text30_onclick()" /></li>
+                                    <li><input id="text99" type="button" value="99" onclick="text99_onclick()" /></li>
+                                </ul>
+                            </li>
+                        </ul>
+                </div><br>
+            </div>
+            <div id="center" onmousedown="down()" onmousemove="move()" onmouseup="up()">
+                <canvas id="art" width="800" height="550"></canvas>
+            </div>
+        <div id="footer" style="text-align: center">
+            <input id="BLACK"  type="image" value="" onclick="black_onclick()" checked/>
+            <input id="RED"  type="image" value="" onclick="red_onclick()"/>
+            <input id="GREEN"  type="image" value="" onclick="green_onclick()" />
+            <input id="BLUE"  type="image" value="" onclick="blue_onclick()"  />
+            <input id="YELLOW"  type="image" value="" onclick="yellow_onclick()" />
+            <input id="ORENGE"  type="image" value="" onclick="orenge_onclick()" />
+            <input id="PINK"  type="image" value="" onclick="pink_onclick()" />
+            <input id="GAIN"  type="image" value="" onclick="gain_onclick()" />
+            <input class="Button2" type="file" onchange="loadFile(this)" value="" title="upload"/><br>
+        </div>
+    </body>
+</html>
+
+
