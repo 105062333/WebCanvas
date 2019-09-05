@@ -112,3 +112,8 @@
     2. 在css用hover來讓游標移動到每個圖都有往右下1px的控制，讓我們知道現在游標在哪。
 
     3. 使用jquery來增加前景圖片，點下LET'S START按鈕後才會進入我們canvas的主頁。
+    
+    
+#DEMO
+
+ https://105062333.gitlab.io/AS_01_WebCanvas/
