@@ -114,6 +114,6 @@
     3. 使用jquery來增加前景圖片，點下LET'S START按鈕後才會進入我們canvas的主頁。
     
     
-#DEMO
+## DEMO
 
  https://105062333.gitlab.io/AS_01_WebCanvas/
